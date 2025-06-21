@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>СКР БАРАХОЛКА</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // or 'media'
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                light: '#3b82f6', // blue-500
+                DEFAULT: '#2563eb', // blue-600
+                dark: '#1d4ed8', // blue-700
+              },
+              secondary: {
+                light: '#60a5fa', // blue-400
+                DEFAULT: '#3b82f6', // blue-500
+                dark: '#2563eb', // blue-600
+              },
+              accent: {
+                light: '#0ea5e9', // sky-500
+                DEFAULT: '#0284c7', // sky-600
+                dark: '#0369a1', // sky-700
+              },
+              // Light theme
+              lightBg: '#ffffff',
+              lightText: '#1f2937', // gray-800
+              lightCard: '#f9fafb', // gray-50
+              lightBorder: '#e5e7eb', // gray-200
+              // Dark theme
+              darkBg: '#1f2937', // gray-800
+              darkText: '#f3f4f6', // gray-100
+              darkCard: '#374151', // gray-700
+              darkBorder: '#4b5563', // gray-600
+            },
+            animation: {
+              'logo-skr': 'logoSkr 2s ease-in-out infinite alternate',
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'slide-up': 'slideUp 0.5s ease-out forwards',
+            },
+            keyframes: {
+              logoSkr: {
+                '0%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-8px)' },
+                '100%': { transform: 'translateY(0)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0px)', opacity: '1'},
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "firebase/": "https://esm.sh/firebase@^11.9.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-lightBg dark:bg-darkBg text-lightText dark:text-darkText transition-colors duration-300">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+    

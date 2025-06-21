@@ -1,0 +1,5 @@
+{
+  "name": "СКР БАРАХОЛКА",
+  "description": "A modern online marketplace for users to buy and sell various items, featuring listings, search, filters, user profiles, and an admin moderation panel. Built with React, TypeScript, and Tailwind CSS.",
+  "requestFramePermissions": []
+}
